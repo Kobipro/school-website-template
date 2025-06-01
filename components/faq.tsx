@@ -4,7 +4,6 @@ import ContentSection from "@/components/content-1";
 import CallToAction from "@/components/call-to-action";
 import FooterSection from "@/components/footer";
 import WhatsAppIcon from "@/components/whatsapp"
-import FAQsTwo from "@/components/faqs"
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <Features />
       <ContentSection />
       <CallToAction />
-      <FAQsTwo />
       <FooterSection />
      <WhatsAppIcon link="https://wa.me/233282696656" />
     </>
