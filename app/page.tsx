@@ -1,21 +1,24 @@
-import HeroSection from "@/components/hero-section";
-import Features from "@/components/features-1";
-import ContentSection from "@/components/content-1";
-import CallToAction from "@/components/call-to-action";
-import FooterSection from "@/components/footer";
-import WhatsAppIcon from "@/components/whatsapp"
-import FAQsTwo from "@/components/faqs"
+import Faq from "./faq";
+import Footer from "./footer";
+// import Founders from "./founders";
+import Hero from "./hero";
+import Navbar from "./navbar";
+// import { Projects } from "./projects";
+import Statistics from "./stats";
 
-export default function Home() {
-  return (
-    <>
-      <HeroSection />
-      <Features />
-      <ContentSection />
-      <CallToAction />
-      <FAQsTwo />
-      <FooterSection />
-     <WhatsAppIcon link="https://wa.me/233282696656" />
-    </>
-  );
+// import Trusted from "./trusted";
+
+const Home = () => {
+  return ( <div>
+ <Navbar />
+ <Hero />
+ {/*<Trusted />*/}
+{/* <Projects />*/}
+ {/*<Founders />*/}
+ <Statistics />
+ <Faq />
+ <Footer />
+  </div> );
 }
+ 
+export default Home;

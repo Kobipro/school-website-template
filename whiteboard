@@ -1,0 +1,248 @@
+whiteboard
+
+
+
+🔧 Solution: Fix the Corrupted Index
+
+1. Remove the Corrupt Index File
+rm -f .git/index
+2. Rebuild the Index
+git reset
+3. Re-add Files and Commit Again
+git add .
+git commit -m "Rebuilt index and committed changes"
+4. Push Your Changes
+git push origin main
+
+
+loan registration guide 
+
+import React from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import WordFadeIn from "./WordFadeIn";
+
+const LoanRegistrationGuide = () => {
+  return (
+    <div>
+      <Navbar />
+      <section className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto">
+        <div className="flex items-center justify-center relative">
+          <WordFadeIn
+            className="text-3xl pt-20 lg:text-5xl font-semibold max-w-3xl mx-auto z-20"
+            words="Step-by-Step Guide to Registering for a Loan"
+          />
+        </div>
+        <p className="text-xl md:text-2xl my-6 md:w-4/5 mx-auto text-gray-500">
+          Follow these steps to complete your registration and get a loan in minutes.
+        </p>
+
+        <div className="space-y-10 mt-10">
+          {[
+            "Create an Account",
+            "Verify Your Email",
+            "Complete Your Profile",
+            "Add Employment Details",
+            "Upload Identification",
+            "Submit Proof of Income",
+            "Link Your Bank Account",
+            "Choose Loan Type",
+            "Specify Loan Amount",
+            "Review Loan Terms",
+            "Submit Your Application",
+            "Await Approval",
+            "Sign Loan Agreement",
+            "Loan Disbursement",
+            "Start Repayment",
+          ].map((step, index) => (
+            <div key={index}>
+              <h3 className="text-2xl lg:text-3xl font-semibold">{index + 1}. {step}</h3>
+              <p className="text-xl md:text-2xl my-6 md:w-4/5 text-gray-500">
+                {getStepDescription(index + 1)}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <Footer />
+    </div>
+  );
+};
+
+const getStepDescription = (step) => {
+  const descriptions = {
+    1: "Sign up with your email address and create a password to start the registration process.",
+    2: "Check your inbox for a verification email and click the link to verify your email address.",
+    3: "Fill out your personal details, including your full name, date of birth, and contact information.",
+    4: "Provide your employment information, such as job title, company name, and salary details.",
+    5: "Upload a valid government-issued ID for identity verification.",
+    6: "Provide recent payslips or bank statements to verify your income.",
+    7: "Connect your bank account to allow for seamless loan disbursement and repayments.",
+    8: "Select the type of loan you need, whether it's a personal loan, emergency loan, or other.",
+    9: "Enter the loan amount you wish to apply for, considering your eligibility.",
+    10: "Carefully read and accept the terms and conditions associated with your loan.",
+    11: "Click the 'Submit' button to send your loan application for review.",
+    12: "Our team will review your application, and you’ll receive a notification once it's approved.",
+    13: "Once approved, digitally sign the loan agreement to proceed with disbursement.",
+    14: "Your approved loan will be disbursed directly into your linked bank account.",
+    15: "Begin your loan repayment according to the agreed schedule. Manage your payments easily through our platform."
+  };
+  return descriptions[step];
+};
+
+export default LoanRegistrationGuide;
+
+
+mission component 
+
+import React from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import WordFadeIn from "./WordFadeIn";
+
+const Mission = () => {
+  return (
+    <>
+      <Navbar />
+      <section className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto">
+        <div className="flex items-center justify-center relative">
+          <WordFadeIn
+            className="text-3xl pt-20 lg:text-5xl font-semibold max-w-3xl mx-auto z-20"
+            words="Our Mission"
+          />
+        </div>
+        <p className="text-xl md:text-2xl my-6 md:w-4/5 mx-auto text-gray-500">
+          Our mission at Oobiiee is to empower underserved communities across Africa by providing easy access to
+          affordable financial solutions that cater to the unique needs of individuals and families. We recognize that
+          countless people in Africa face financial barriers that prevent them from pursuing their dreams, building
+          businesses, or improving their standard of living. These challenges are often compounded by traditional
+          financial systems that require extensive documentation, credit history, or collateral—resources that many
+          hardworking people simply do not have. At Oobiiee, we are committed to breaking down these barriers and
+          offering a more inclusive, human-centered approach to financial services.
+        </p>
+        <p className="text-xl md:text-2xl my-6 md:w-4/5 mx-auto text-gray-500">
+          We believe that access to financial resources should not be a privilege but a right for everyone who strives
+          for a better life. That’s why we offer loans that are simple, transparent, and tailored to meet the needs of
+          people at different stages of their financial journey. Our goal is not only to provide funds but to serve as
+          a partner in progress, supporting individuals in realizing their full potential. We aim to equip them with
+          the tools, resources, and financial literacy they need to manage their finances confidently and sustainably.
+        </p>
+        <p className="text-xl md:text-2xl my-6 md:w-4/5 mx-auto text-gray-500">
+          We understand that in Africa, many people run small businesses, support families, or fund educational
+          aspirations, and we seek to make those endeavors more attainable by offering loans without the traditional
+          hurdles. Through our digital platform, we reach underserved populations, including those in rural areas,
+          providing financial access where it’s needed the most. By leveraging technology, we make the loan process
+          faster, more secure, and accessible to people from all walks of life.
+        </p>
+        <p className="text-xl md:text-2xl my-6 md:w-4/5 mx-auto text-gray-500">
+          Our vision extends beyond just lending money; we aim to foster economic growth, reduce poverty, and build
+          stronger communities across the continent. At Oobiiee, we are dedicated to transforming lives and empowering
+          Africa's future, one loan at a time.
+        </p>
+      </section>
+      <Footer />
+    </>
+  );
+};
+
+export default Mission;
+
+
+privacy policy component
+
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WordFadeIn from "@/components/WordFadeIn";
+
+const PrivacyPolicy = () => {
+  return (
+    <>
+      <Navbar />
+      <section className="md:px-0 mx-6 xl:w-4/5 2xl:w-[68%] md:mx-auto">
+        <div className="flex items-center justify-center relative">
+          <WordFadeIn
+            className="text-3xl pt-20 lg:text-5xl font-semibold max-w-3xl mx-auto md:text-center z-20"
+            words="Privacy Policy"
+          />
+        </div>
+
+        <p className="text-xl md:text-2xl my-6 md:w-4/5 mx-auto text-gray-500">
+          At Oobiiee, we prioritize your privacy and are committed to protecting your personal data.
+          This Privacy Policy outlines the data we collect, including identification, financial, and usage information,
+          and our methods, such as direct collection or automated technologies. Your data is processed for loan applications,
+          service improvement, compliance, fraud prevention, and marketing, based on contractual necessity, legal obligations,
+          or consent. We ensure data security with encryption and retention policies, share data as required, and facilitate
+          international transfers under safeguards. You have rights regarding your data access, correction, and deletion.
+          Automated decisions, like loan assessments, are subject to human review on request. We use cookies for a better
+          user experience and abide by regulations concerning children’s data. Updates to this policy will be communicated
+          on our website. We adhere to international data protection standards, ensuring that your personal information
+          is processed lawfully and transparently. All data processing is conducted with legitimate business interests,
+          and we take all necessary steps to guarantee your rights are respected at every stage of the process.
+          The data retention period depends on the nature and purpose of the information collected, but rest assured,
+          data is kept only for as long as needed. In the event of a data breach, we have procedures in place to inform
+          you and take appropriate measures to mitigate any potential harm. We do not sell or lease your personal
+          information to third parties, and any data-sharing agreements we maintain with third-party service providers
+          are strictly controlled. If you wish to withdraw your consent or make inquiries about our data practices,
+          please reach out using the contact information provided below. We also provide an opt-out option for
+          marketing communications, allowing you to manage your preferences. Our commitment to your privacy
+          includes ongoing reviews of our practices and policies to stay in alignment with evolving regulatory
+          requirements and technological advancements. By continuing to use our services, you acknowledge
+          that you have read, understood, and accepted the terms outlined in this Privacy Policy.
+        </p>
+      </section>
+      <Footer />
+    </>
+  );
+};
+
+export default PrivacyPolicy;
+
+
+words fade in 
+
+"use client";
+
+import { motion, Variants } from "framer-motion";
+
+import { cn } from "@/lib/utils";
+
+interface WordFadeInProps {
+  words: string;
+  className?: string;
+  delay?: number;
+  variants?: Variants;
+}
+
+export default function WordFadeIn({
+  words,
+  delay = 0.15,
+  variants = {
+    hidden: { opacity: 0 },
+    visible: (i: any) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: i * delay },
+    }),
+  },
+  className,
+}: WordFadeInProps) {
+  const _words = words.split(" ");
+
+  return (
+    <motion.h1
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      className={cn(
+        "font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]",
+        className,
+      )}
+    >
+      {_words.map((word, i) => (
+        <motion.span key={word} variants={variants} custom={i}>
+          {word}{" "}
+        </motion.span>
+      ))}
+    </motion.h1>
+  );
+}

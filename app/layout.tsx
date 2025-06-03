@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from '@vercel/analytics/next';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const font = Plus_Jakarta_Sans({
+  weight : '400',
+  subsets : ['latin']
+})
 
 export const metadata: Metadata = {
-  title: "Greenfield Academy",
-  description:
-    "Welcome to Greenfield Academy — nurturing curiosity, character, and community in every child.",
+  title: "Oobiiee | Empowering Your Tomorrow",
+  description: "Empower your tomorrow with Oobiiee, offering flexible monthly loans and financial solutions to help you achieve your goals.",
 };
 
 export default function RootLayout({
@@ -25,18 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={font.className}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+
+        {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -1,10 +1,10 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { HeroHeader } from "@/components/hero8-header";
+import FooterSection from "@/components/footer";
 
 export default function AchievementsSection() {
   return (
     <>
-      <Navbar />
+      < HeroHeader />
 
       <section className="py-16 md:py-24 bg-white dark:bg-zinc-900">
         <div className="max-w-5xl mx-auto px-6">
@@ -56,7 +56,7 @@ export default function AchievementsSection() {
         </div>
       </section>
 
-      <Footer />
+      <FooterSection />
     </>
   );
 }
